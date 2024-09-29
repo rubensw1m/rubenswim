@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); /* Шрифт VT323 */
+
+        body {
+            font-family: 'VT323', sans-serif; /* Похожий на Adult Swim */
+            font-size: 24px;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+    	.image-container {
+    		position: absolute;
+    		top: 0; /* Установите в верхнюю часть страницы */
+    		left: 50%; /* Центрируем по горизонтали */
+    		transform: translateX(-50%); /* Сдвигаем назад на половину ширины контейнера */
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    		width: 40%; /* Устанавливаем ширину контейнера на 40% */
+    		max-width: 400px; /* Ограничиваем максимальную ширину, если необходимо */
+}
+
+		.image-container img {
+    		width: 100%; /* Устанавливаем ширину изображения на 100% от контейнера */
+    		height: auto; /* Автоматически рассчитываем высоту для сохранения пропорций */
+}
+
+
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0;
+        }
+
+        .spotify-link {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        .track-section {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .track {
+            width: 40%;
+            text-align: left;
+        }
+
+        .track img {
+            width: 50%;
+            max-width: 400px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .track h2 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        .track p {
+            font-size: 1.2em;
+            color: #aaa;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+ <div class="image-container">
+        <img src="fontbolt.png" id="profileImage" alt="Ruben Swim">
+    </div>
+    <p class="spotify-link">my music</p>
+    
+    <div class="spotify-link">
+        <a href="https://open.spotify.com/artist/0CMeVbQu6TX8LjAzPToaUM" target="_blank">Listen on Spotify</a>
+    </div>
+
+    <div class="track-section">
+        <!-- Первый трек -->
+        <div class="track">
+            <img src="image.png" alt="Balls Type Beat">
+            <h2>balls type beat</h2>
+            <p>rubenswim</p>
+            <p>sept 29</p>
+        </div>
+
+        <!-- Второй трек -->
+        <div class="track">
+            <img src="tele2.png" alt="Tele Twee">
+            <h2>tele twee</h2>
+            <p>rubenswim</p>
+            <p>oct 5</p>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <p>© 2024 rubenswim. All rights reserved.</p>
+</div>
+
+</body>
+</html>
