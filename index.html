@@ -3,41 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ruben swim</title>
+    <title>rubenswim</title>
+    
     <style>
-        @font-face {
-            font-family: 'Helvetica Neue Condensed Bold';
-            src: url('HelveticaNeueCondensedBold.woff2') format('woff2'),
-                 url('HelveticaNeueCondensedBold.woff') format('woff');
-            font-weight: bold;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); /* Альтернативный шрифт */
 
         body {
+            font-family: 'VT323', sans-serif; /* Похожий на Adult Swim */
+            font-size: 24px;
+            margin: 0;
+            padding: 0;
             background-color: black;
-            font-family: 'Helvetica Neue Condensed Bold', Arial, sans-serif;
-            text-align: center;
             color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             height: 100vh;
+            overflow: hidden;
+        }
+
+        .image-container {
+            position: absolute;
+            top: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-            margin: 0;
+            transition: all 1s ease;
         }
 
-        img {
-            max-width: 200px;
-            margin-bottom: 20px;
+        #profileImage {
+            max-width: 300px;
+            transition: all 1s ease;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            text-transform: lowercase;
-            letter-spacing: 0.05em;
+        .bio {
+            opacity: 0;
+            text-align: center;
+            margin-top: 20px;
+            transition: opacity 1s ease;
+        }
+
+        .bio p {
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+
+        /* Соцсети */
+        .social-links {
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s ease;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .image-move-up {
+            top: 10%;
+        }
+
+        .show-bio {
+            opacity: 1;
+        }
+
+        /* Стиль для ссылки на страницу My Music */
+        .second-page-link {
+            margin-top: 10px;
+            font-size: 14px;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <img src="fontbolt.png" alt="ruben swim logo">    
+
+    <div class="image-container">
+        <img src="fontbolt.png" id="profileImage" alt="Ruben Swim">
+    </div>
+
+    <div class="bio">
+        <h2>Me</h2>
+        <p>
+            Hey! So, I'm Ruben (yep, that's my real name)<br>
+            I'm from Kazakhstan, Almaty.<br>
+            I know 3 languages fluently, and I play guitar for 7 years.<br>
+            Also I started making my own music recently.
+        </p>
+    </div>
+
+    <div class="social-links">
+        <h3>My Socials</h3>
+        <a href="https://www.instagram.com/_rubenswim/" target="_blank" style="color: white;">Instagram</a>| 
+        <a href="#" target="_blank" style="color: white;">TikTok</a>
+        <a href="second_page.html" class="second-page-link" target="_blank" style="color: white;">My Music</a> <!-- Изменено на "My Music" -->
+    </div>
+
+    <script>
+        setTimeout(function() {
+            document.querySelector('.image-container').classList.add('image-move-up');
+            document.querySelector('.bio').classList.add('show-bio');
+            document.querySelector('.social-links').classList.add('show-bio');
+        }, 3000);
+    </script>
 </body>
 </html>
