@@ -6,10 +6,10 @@
     <title>rubenswim</title>
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); /* Альтернативный шрифт */
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
         body {
-            font-family: 'VT323', sans-serif; /* Похожий на Adult Swim */
+            font-family: 'VT323', sans-serif;
             font-size: 24px;
             margin: 0;
             padding: 0;
@@ -33,7 +33,7 @@
         }
 
         #profileImage {
-            max-width: 300px;
+            max-width: 50%; /* Изображение занимает половину ширины экрана */
             transition: all 1s ease;
         }
 
@@ -42,6 +42,7 @@
             text-align: center;
             margin-top: 20px;
             transition: opacity 1s ease;
+            padding: 0 20px; /* Добавляем отступы для текста на мобильных */
         }
 
         .bio p {
@@ -49,7 +50,6 @@
             word-break: break-word;
         }
 
-        /* Соцсети */
         .social-links {
             text-align: center;
             opacity: 0;
@@ -71,35 +71,68 @@
             opacity: 1;
         }
 
-        /* Стиль для ссылки на страницу My Music */
         .second-page-link {
             margin-top: 10px;
             font-size: 14px;
             display: block;
+        }
+
+        /* Адаптивные стили для мобильных устройств */
+        @media (max-width: 768px) {
+            body {
+                font-size: 18px; /* Уменьшаем размер шрифта для мобильных */
+            }
+
+            #profileImage {
+                max-width: 70%; /* Увеличиваем изображение на мобильных */
+            }
+
+            .bio {
+                font-size: 16px; /* Сужаем текст на мобильных */
+            }
+
+            .social-links a {
+                font-size: 14px; /* Размер ссылок меньше на мобильных */
+            }
+        }
+
+        /* Адаптивные стили для маленьких устройств (телефоны) */
+        @media (max-width: 480px) {
+            body {
+                font-size: 16px;
+            }
+
+            #profileImage {
+                max-width: 80%; /* Максимальная ширина изображения на мобильных */
+            }
+
+            .bio {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="image-container">
-        <img src="fontbolt.png" id="profileImage" alt="Ruben Swim">
+        <img src="fontbolt.png" id="profileImage" alt="rubenswim">
     </div>
 
     <div class="bio">
         <h2>Me</h2>
         <p>
             Hey! So, I'm Ruben (yep, that's my real name)<br>
-            I'm from Kazakhstan, Almaty.<br>
-            I know 3 languages fluently, and I play guitar for 7 years.<br>
-            Also I started making my own music recently.
+            I'm from Kazakhstan, Almaty<br>
+            I know 3 languages fluently, and I play guitar for 7 years<br>
+            Also, I started producing my own music recently ᗜˬᗜ
         </p>
     </div>
 
     <div class="social-links">
-        <h3>My Socials</h3>
-        <a href="https://www.instagram.com/_rubenswim/" target="_blank" style="color: white;">Instagram</a>| 
-        <a href="tiktok.html" target="_blank" style="color: white;">TikTok</a>
-        <a href="music.html" class="second-page-link" target="_blank" style="color: white;">My Music</a> <!-- Изменено на "My Music" -->
+        <h3>My Socials:</h3>
+        <a href="instagram.com/@_rubenswim" style="color: white;">Instagram</a> | 
+        <a href="tiktok.html" style="color: white;">TikTok</a>
+        <a href="music.html" class="second-page-link" style="color: white;">My Music</a>
     </div>
 
     <script>
