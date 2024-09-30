@@ -15,29 +15,23 @@
             padding: 0;
             background-color: black;
             color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            overflow: hidden;
         }
         
     	.image-container {
     		position: absolute;
-    		top: 0; /* Установите в верхнюю часть страницы */
-    		left: 50%; /* Центрируем по горизонтали */
-    		transform: translateX(-50%); /* Сдвигаем назад на половину ширины контейнера */
+    		top: 0;
+    		left: 50%;
+    		transform: translateX(-50%);
     		display: flex;
     		justify-content: center;
     		align-items: center;
-    		width: 40%; /* Устанавливаем ширину контейнера на 40% */
-    		max-width: 400px; /* Ограничиваем максимальную ширину, если необходимо */
+    		width: 40%;
+    		max-width: 400px;
 		}
 
 		.image-container img {
-    		width: 100%; /* Устанавливаем ширину изображения на 100% от контейнера */
-    		height: auto; /* Автоматически рассчитываем высоту для сохранения пропорций */
+    		width: 100%;
+    		height: auto;
 		}
 
         .container {
@@ -45,7 +39,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
         }
 
         h1 {
@@ -56,6 +50,7 @@
         .spotify-link {
             margin-top: 20px;
             font-size: 1.2em;
+            text-align: center;
         }
 
         .track-section {
@@ -63,16 +58,15 @@
             justify-content: space-around;
             width: 100%;
             padding: 20px;
-            flex-wrap: wrap; /* Чтобы треки располагались вертикально на мобильных */
         }
 
         .track {
-            width: 30%; /* Уменьшаем ширину трека на больших экранах */
+            width: 40%;
             text-align: left;
         }
 
         .track img {
-            width: 100%; /* Изображение занимает всю ширину трека */
+            width: 100%;
             height: auto;
             margin-bottom: 10px;
         }
@@ -82,55 +76,82 @@
             margin-bottom: 5px;
         }
 
+        /* Цвет и выравнивание для rubenswim и даты */
         .track p {
             font-size: 1.2em;
-            color: #aaa;
+            color: #aaa; /* Серый цвет для текста */
+            text-align: left; /* Выравнивание по левому краю */
+        }
+
+        /* Стиль для третьего трека */
+        .third-track {
+            width: 50%; /* Задаем ширину блока, чтобы он был центром */
+            margin: 40px auto; /* Центрируем блок по горизонтали */
+            padding: 20px;
+            text-align: left; /* Выравнивание текста по левому краю */
+        }
+
+        .third-track img {
+            width: 100%; /* Ширина изображения 100% от контейнера */
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .third-track h2 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        /* Цвет и выравнивание для третьего трека */
+        .third-track p {
+            font-size: 1.2em;
+            color: #aaa; /* Серый цвет */
+            text-align: left; /* Выравнивание по левому краю */
         }
 
         .footer {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
             text-align: center;
             font-size: 0.9em;
             color: #555;
+            padding-bottom: 20px;
         }
 
         /* Медиазапросы для мобильных устройств */
         @media (max-width: 768px) {
             .track {
-                width: 45%; /* Увеличиваем ширину трека для планшетов */
+                width: 45%;
+            }
+
+            .third-track {
+                width: 80%; /* Уменьшаем ширину третьего трека на мобильных */
             }
         }
 
         @media (max-width: 480px) {
             .track {
-                width: 100%; /* Треки будут занимать 100% ширины на телефонах */
+                width: 100%;
             }
 
-            .spotify-link {
-                font-size: 1em; /* Уменьшаем размер шрифта на мобильных */
-            }
-
-            h1 {
-                font-size: 2em; /* Уменьшаем заголовок на мобильных */
+            .third-track {
+                width: 100%; /* Полная ширина для очень узких экранов */
             }
         }
     </style>
 </head>
 <body>
 
- <div class="image-container">
+    <div class="image-container">
         <img src="fontbolt.png" id="profileImage" alt="Ruben Swim">
     </div>
+
     <p class="spotify-link">my music</p>
     
     <div class="spotify-link">
         <a href="https://open.spotify.com/artist/0CMeVbQu6TX8LjAzPToaUM" target="_blank">Listen on Spotify</a>
     </div>
 
+    <!-- Первый и второй треки -->
     <div class="track-section">
-        <!-- Первый трек -->
         <div class="track">
             <img src="image.png" alt="Balls Type Beat">
             <h2>balls type beat</h2>
@@ -138,21 +159,20 @@
             <p>sept 29</p>
         </div>
 
-        <!-- Второй трек -->
         <div class="track">
             <img src="tele2.png" alt="Tele Twee">
-            <h2>teletwee</h2>
+            <h2>tele twee</h2>
             <p>rubenswim</p>
             <p>oct 5</p>
         </div>
+    </div>
 
-        <!-- Третий трек -->
-        <div class="track">
-            <img src="your_image.png" alt="Third Track">
-            <h2>third track</h2>
-            <p>rubenswim</p>
-            <p>oct 10</p>
-        </div>
+    <!-- Третий трек (по центру страницы, текст по левому краю) -->
+    <div class="third-track">
+        <img src="3track.jpg" alt="Third Track">
+        <h2>JFU4OVUP</h2>
+        <p>rubenswim</p>
+        <p>oct 10</p>
     </div>
 
     <div class="footer">
