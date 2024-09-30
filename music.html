@@ -3,36 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Music</title>
+    <title>rubenswim | Artist Profile</title>
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); /* Шрифт VT323 */
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
         body {
-            font-family: 'VT323', sans-serif; /* Похожий на Adult Swim */
+            font-family: 'VT323', sans-serif;
             font-size: 24px;
             margin: 0;
             padding: 0;
             background-color: black;
             color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
-        
-    	.image-container {
-    		position: absolute;
-    		top: 0;
-    		left: 50%;
-    		transform: translateX(-50%);
-    		display: flex;
-    		justify-content: center;
-    		align-items: center;
-    		width: 40%;
-    		max-width: 400px;
-		}
 
-		.image-container img {
-    		width: 100%;
-    		height: auto;
-		}
+        .image-container {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            max-width: 400px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
 
         .container {
             display: flex;
@@ -42,9 +46,9 @@
             min-height: 100vh;
         }
 
-        h1 {
-            font-size: 3em;
-            margin-bottom: 0;
+        .bio {
+            text-align: center;
+            margin-top: 20px;
         }
 
         .spotify-link {
@@ -76,39 +80,6 @@
             margin-bottom: 5px;
         }
 
-        /* Цвет и выравнивание для rubenswim и даты */
-        .track p {
-            font-size: 1.2em;
-            color: #aaa; /* Серый цвет для текста */
-            text-align: left; /* Выравнивание по левому краю */
-        }
-
-        /* Стиль для третьего трека */
-        .third-track {
-            width: 50%; /* Задаем ширину блока, чтобы он был центром */
-            margin: 40px auto; /* Центрируем блок по горизонтали */
-            padding: 20px;
-            text-align: left; /* Выравнивание текста по левому краю */
-        }
-
-        .third-track img {
-            width: 100%; /* Ширина изображения 100% от контейнера */
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-        .third-track h2 {
-            font-size: 2em;
-            margin-bottom: 5px;
-        }
-
-        /* Цвет и выравнивание для третьего трека */
-        .third-track p {
-            font-size: 1.2em;
-            color: #aaa; /* Серый цвет */
-            text-align: left; /* Выравнивание по левому краю */
-        }
-
         .footer {
             text-align: center;
             font-size: 0.9em;
@@ -121,19 +92,11 @@
             .track {
                 width: 45%;
             }
-
-            .third-track {
-                width: 80%; /* Уменьшаем ширину третьего трека на мобильных */
-            }
         }
 
         @media (max-width: 480px) {
             .track {
                 width: 100%;
-            }
-
-            .third-track {
-                width: 100%; /* Полная ширина для очень узких экранов */
             }
         }
     </style>
@@ -144,32 +107,39 @@
         <img src="fontbolt.png" id="profileImage" alt="Ruben Swim">
     </div>
 
-    <p class="spotify-link">my music</p>
-    
-    <div class="spotify-link">
-        <a href="https://open.spotify.com/artist/0CMeVbQu6TX8LjAzPToaUM" target="_blank">Listen on Spotify</a>
+    <div class="bio">
+        <h2>Artist: rubenswim</h2>
+        <p>Hey! I'm Ruben, a musician from Almaty, Kazakhstan. I create unique beats and songs that reflect my thoughts. Check out my tracks below!</p>
     </div>
 
-    <!-- Первый и второй треки -->
+    <div class="spotify-link">
+        <p>Listen to my music on Spotify:</p>
+        <a href="https://open.spotify.com/artist/0CMeVbQu6TX8LjAzPToaUM" target="_blank" style="color: white;">Spotify</a>
+    </div>
+
+    <!-- Треки -->
     <div class="track-section">
         <div class="track">
             <img src="image.png" alt="Balls Type Beat">
+            <p>live on spotify!</p>
             <h2>balls type beat</h2>
             <p>rubenswim</p>
             <p>sept 29</p>
         </div>
 
         <div class="track">
-            <img src="Tele2.png" alt="Tele Twee">
+            <img src="Tele2.png" alt="TeleTwee">
+            <p>soon live</p>
             <h2>tele twee</h2>
             <p>rubenswim</p>
             <p>oct 5</p>
         </div>
     </div>
 
-    <!-- Третий трек (по центру страницы, текст по левому краю) -->
-    <div class="third-track">
-        <img src="3track.JPG" alt="Third Track">
+    <!-- Третий трек -->
+    <div class="track">
+        <img src="3track.JPG" alt="JFU4OVUP">
+        <p>soon live</p>
         <h2>JFU4OVUP</h2>
         <p>rubenswim</p>
         <p>oct 10</p>
@@ -177,7 +147,8 @@
 
     <div class="footer">
         <p>© 2024 rubenswim. All rights reserved.</p>
+        <p>For questions, email: <a href="mailto:ruben@rubenswim.com" style="color: white;">ruben@rubenswim.com</a></p>
     </div>
 
-</body>
+</body> 
 </html>
