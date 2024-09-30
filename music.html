@@ -33,14 +33,12 @@
     		align-items: center;
     		width: 40%; /* Устанавливаем ширину контейнера на 40% */
     		max-width: 400px; /* Ограничиваем максимальную ширину, если необходимо */
-}
+		}
 
 		.image-container img {
     		width: 100%; /* Устанавливаем ширину изображения на 100% от контейнера */
     		height: auto; /* Автоматически рассчитываем высоту для сохранения пропорций */
-}
-
-
+		}
 
         .container {
             display: flex;
@@ -65,16 +63,16 @@
             justify-content: space-around;
             width: 100%;
             padding: 20px;
+            flex-wrap: wrap; /* Чтобы треки располагались вертикально на мобильных */
         }
 
         .track {
-            width: 40%;
+            width: 30%; /* Уменьшаем ширину трека на больших экранах */
             text-align: left;
         }
 
         .track img {
-            width: 50%;
-            max-width: 400px;
+            width: 100%; /* Изображение занимает всю ширину трека */
             height: auto;
             margin-bottom: 10px;
         }
@@ -96,6 +94,27 @@
             text-align: center;
             font-size: 0.9em;
             color: #555;
+        }
+
+        /* Медиазапросы для мобильных устройств */
+        @media (max-width: 768px) {
+            .track {
+                width: 45%; /* Увеличиваем ширину трека для планшетов */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .track {
+                width: 100%; /* Треки будут занимать 100% ширины на телефонах */
+            }
+
+            .spotify-link {
+                font-size: 1em; /* Уменьшаем размер шрифта на мобильных */
+            }
+
+            h1 {
+                font-size: 2em; /* Уменьшаем заголовок на мобильных */
+            }
         }
     </style>
 </head>
@@ -121,17 +140,24 @@
 
         <!-- Второй трек -->
         <div class="track">
-            <img src="Tele2.png" alt="Tele Twee">
-            <h2>tele twee</h2>
+            <img src="tele2.png" alt="Tele Twee">
+            <h2>teletwee</h2>
             <p>rubenswim</p>
             <p>oct 5</p>
         </div>
-    </div>
-</div>
 
-<div class="footer">
-    <p>© 2024 rubenswim. All rights reserved.</p>
-</div>
+        <!-- Третий трек -->
+        <div class="track">
+            <img src="your_image.png" alt="Third Track">
+            <h2>third track</h2>
+            <p>rubenswim</p>
+            <p>oct 10</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 rubenswim. All rights reserved.</p>
+    </div>
 
 </body>
 </html>
