@@ -71,6 +71,17 @@
             opacity: 1;
         }
 
+        .contact-section {
+            opacity: 0;
+            text-align: center;
+            margin-top: 20px;
+            transition: opacity 1s ease;
+        }
+
+        .show-contacts {
+            opacity: 1;
+        }
+
         .second-page-link {
             margin-top: 10px;
             font-size: 14px;
@@ -130,9 +141,15 @@
 
     <div class="social-links">
         <h3>My Socials:</h3>
-        <a href="instagram.com/@_rubenswim" style="color: white;">Instagram</a> | 
+        <a href="https://instagram.com/@_rubenswim" style="color: white;">Instagram</a>| 
         <a href="tiktok.html" style="color: white;">TikTok</a>
         <a href="music.html" class="second-page-link" style="color: white;">My Music</a>
+    </div>
+
+<div class="contact-section">
+        <h3>Contact Me:</h3>
+        <a href="mailto:ruben@rubenswim.com">ruben@rubenswim.com</a> |
+        <a href="https://t.me/nederlanded" target="_blank">Telegram</a>
     </div>
 
     <script>
@@ -140,6 +157,7 @@
             document.querySelector('.image-container').classList.add('image-move-up');
             document.querySelector('.bio').classList.add('show-bio');
             document.querySelector('.social-links').classList.add('show-bio');
+            document.querySelector('.contact-section').classList.add('show-contacts');
         }, 3000);
     </script>
 </body>
