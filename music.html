@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rubenswim</title>
-    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
@@ -29,8 +28,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 40%;
-            max-width: 400px;
+            width: 30%;
+            max-width: 300px;
         }
 
         .image-container img {
@@ -59,14 +58,17 @@
 
         .track-section {
             display: flex;
-            justify-content: space-around;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
             width: 100%;
             padding: 20px;
         }
 
         .track {
-            width: 40%;
-            text-align: left;
+            width: 25%; /* Уменьшенная ширина трека */
+            max-width: 200px; /* Максимальная ширина изображения */
+            text-align: center;
         }
 
         .track img {
@@ -76,7 +78,7 @@
         }
 
         .track h2 {
-            font-size: 2em;
+            font-size: 1.5em;
             margin-bottom: 5px;
         }
 
@@ -87,28 +89,22 @@
             padding-bottom: 20px;
         }
 
-        /* Медиазапросы для мобильных устройств */
         @media (max-width: 768px) {
             .track {
-                width: 45%;
+                width: 40%; /* Больше места на мобильных */
             }
         }
 
         @media (max-width: 480px) {
             .track {
-                width: 100%;
+                width: 80%; /* Еще большее сжатие для небольших экранов */
             }
         }
     </style>
 </head>
 <body>
-
     <div class="image-container">
         <img src="fontbolt.png" id="profileImage" alt="Ruben Swim">
-    </div>
-
-    <div class="bio"
-        <h3>i stopped producing my music but you can check out what ive done</h3>
     </div>
 
     <div class="spotify-link">
@@ -116,38 +112,39 @@
         <a href="https://open.spotify.com/artist/0CMeVbQu6TX8LjAzPToaUM" target="_blank" style="color: white;">Spotify</a>
     </div>
 
-    <!-- Треки -->
+    <div class="bio">
+        <p>I stopped producing my music but you can check out what I've done</p>
+    </div>
+
     <div class="track-section">
         <div class="track">
             <img src="image.png" alt="Balls Type Beat">
-            <p>live on spotify!</p>
-            <h2>balls type beat</h2>
+            <p>Live on Spotify!</p>
+            <h2>Balls Type Beat</h2>
             <p>rubenswim</p>
-            <p>sept 29</p>
+            <p>Sept 29</p>
         </div>
 
         <div class="track">
-            <img src="Tele2.png" alt="TeleTwee">
-            <p>live on Spotify</p>
-            <h2>tele twee</h2>
+            <img src="Tele2.png" alt="Tele Twee">
+            <p>Live on Spotify</p>
+            <h2>Tele Twee</h2>
             <p>rubenswim</p>
-            <p>oct 5</p>
+            <p>Oct 5</p>
+        </div>
+
+        <div class="track">
+            <img src="3track.JPG" alt="JFU4OVUP">
+            <p>Live on Spotify</p>
+            <h2>JFU4OVUP</h2>
+            <p>rubenswim</p>
+            <p>Oct 10</p>
         </div>
     </div>
 
-    <!-- Третий трек -->
-    <div class="track">
-        <img src="3track.JPG" alt="JFU4OVUP">
-        <p>live on Spotify</p>
-        <h2>JFU4OVUP</h2>
-        <p>rubenswim</p>
-        <p>oct 10</p>
-    </div>
-
     <div class="footer">
-        <p>© 2024 rubenswim. All rights reserved.</p>
+        <p>© 2024 Rubenswim. All rights reserved.</p>
         <p>For questions, email: <a href="mailto:ruben@rubenswim.com" style="color: white;">ruben@rubenswim.com</a></p>
     </div>
-
-</body> 
+</body>
 </html>
