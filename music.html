@@ -37,23 +37,32 @@
             height: auto;
         }
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .bio {
-            text-align: center;
-            margin-top: 100px;
-        }
-
         .spotify-link {
-            margin-top: 20px;
+            margin-top: 70px;
             font-size: 1.2em;
             text-align: center;
+        }
+
+        .platform-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .platform-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            padding: 8px 15px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .platform-links a:hover {
+            background-color: white;
+            color: black;
         }
 
         .track-section {
@@ -80,6 +89,15 @@
         .track h2 {
             font-size: 1.5em;
             margin-bottom: 5px;
+            text-transform: none;
+            word-wrap: break-word;
+            white-space: normal;
+        }
+
+        .track p {
+            text-transform: none;
+            word-wrap: break-word;
+            white-space: normal;
         }
 
         .footer {
@@ -106,45 +124,53 @@
     <div class="image-container">
         <img src="fontbolt.png" id="profileImage" alt="Ruben Swim">
     </div>
-
-    <div class="bio">
-        <p>I stopped producing my music but you can check out what I've done</p>
-    </div>
     
     <div class="spotify-link">
-        <p>Listen to my music on Spotify:</p>
-        <a href="https://open.spotify.com/artist/0CMeVbQu6TX8LjAzPToaUM" target="_blank" style="color: white;">Spotify</a>
+        <p> my music is avaliable on all platforms!</p>
+        <div class="platform-links">
+            <a href="https://open.spotify.com/artist/0CMeVbQu6TX8LjAzPToaUM" target="_blank">Spotify</a>
+            <a href="https://music.apple.com/us/artist/rubenswim/1782393507" target="_blank">Apple Music</a>
+            <a href="https://music.youtube.com/channel/UCffGgln4Ssd1nJ7GINDBmBA" target="_blank">YouTube Music</a>
+        </div>
     </div>
 
     <div class="track-section">
         <div class="track">
-            <img src="image.png" alt="Balls Type Beat">
-            <p>live on Spotify</p>
-            <h2>Balls Type Beat</h2>
+            <img src="1.png" alt="geometric crap">
+            <p>avaliable on all platforms</p>
+            <h2>geometric crap</h2>
             <p>rubenswim</p>
-            <p>sept 29 2024</p>
+            <p>nov 26 2024</p>
         </div>
 
         <div class="track">
-            <img src="Tele2.png" alt="Tele Twee">
-            <p>live on Spotify</p>
-            <h2>teletwee</h2>
+            <img src="2.png" alt="deoxyribonucleic">
+            <p>avaliable on all platforms</p>
+            <h2>deoxyribonucleic</h2>
             <p>rubenswim</p>
-            <p>oct 5 2024</p>
+            <p>dec 6 2024</p>
         </div>
 
         <div class="track">
-            <img src="3track.JPG" alt="JFU4OVUP">
-            <p>live on Spotify</p>
-            <h2>JFU4OVUP</h2>
+            <img src="3.png" alt="harkrubonkht">
+            <p>avaliable on all platforms</p>
+            <h2>sharkrubonkht</h2>
             <p>rubenswim</p>
-            <p>oct 10 2024</p>
+            <p>dec 7 2024</p>
+        </div>
+
+        <div class="track">
+            <img src="4.png" alt="Amen Apache">
+            <p>soon avaliable</p>
+            <h2>amen apache</h2>
+            <p>rubenswim</p>
+            <p>dec 10 2024</p>
         </div>
     </div>
 
     <div class="footer">
         <p>© rubenswim 2024. All rights reserved.</p>
-        <p>For questions, email: <a href="mailto:ruben@sw1m.ru" style="color: white;">ruben@sw1m.ru</a></p>
+        <p>for questions, email: <a href="mailto:ruben@rubenswim.com" style="color: white;">ruben@rubenswim.com</a></p>
     </div>
 </body>
 </html>
