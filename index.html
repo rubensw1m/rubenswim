@@ -10,7 +10,7 @@
 
         body {
             font-family: 'VT323', sans-serif;
-            font-size: 24px;
+            font-size: 28px;
             margin: 0;
             padding: 0;
             background-color: black;
@@ -18,56 +18,73 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             height: 100vh;
-            overflow: hidden;
         }
 
-        .image-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .navbar {
+            width: 100%;
+            background-color: black;
+            padding: 10px 20px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            transition: all 1s ease;
+            justify-content: space-between;
+            border-bottom: 5px solid gray;
         }
 
-        #profileImage {
-            max-width: 50%;
-            transition: all 1s ease;
+        .navbar-logo {
+            font-size: 28px;
+            font-weight: bold;
+            background-color: white;
+            color: black;
+            padding: 5px 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
         }
 
         .bio {
-            opacity: 0;
             text-align: center;
             margin-top: 80px;
-            transition: opacity 1s ease;
             padding: 0 20px;
         }
 
+        .bio h2 {
+            font-size: 32px;
+        }
+
         .bio p {
+            font-size: 26px;
             word-wrap: break-word;
             word-break: break-word;
         }
 
         .social-links {
             text-align: center;
-            opacity: 0;
-            transition: opacity 1s ease;
-            margin-top: 20px;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .social-links a {
             color: white;
             text-decoration: none;
-            margin-right: 10px;
+            font-size: 24px;
+            margin: 5px 0;
         }
 
         .music-button {
             display: inline-block;
-            margin-top: 25px;
+            margin-top: 15px;
             padding: 10px 15px;
             font-size: 24px;
             background-color: transparent;
@@ -84,64 +101,32 @@
             color: black;
         }
 
-        .image-move-up {
-            top: 10%;
-        }
-
-        .show-bio {
-            opacity: 1;
-        }
-
-        .contact-section {
-            opacity: 0;
-            text-align: center;
-            margin-top: 20px;
-            transition: opacity 1s ease;
-        }
-
-        .show-contacts {
-            opacity: 1;
-        }
-
     </style>
 </head>
 <body>
 
-    <div class="image-container">
-        <img src="fontbolt.png" id="profileImage" alt="rubenswim">
+    <div class="navbar">
+        <div class="navbar-logo">[ruben swim]</div>
+        <div class="nav-links">
+            <a href="#">HOME</a>
+            <a href="#">MUSIC</a>
+            <a href="#">SOCIALS</a>
+            <a href="#">CONTACT</a>
+        </div>
     </div>
 
     <div class="bio">
-        <h2>about me</h2>
+        <h2>ABOUT ME</h2>
         <p>
-            name's ruben<br>
-            Kazakhstan, Almaty<br>
-            i make music<br>
-            ᗜˬᗜ
+            name's Ruben (real name btw) <br>
+          Almaty, Kazakhstan<br>
+          ----------------<br>
+          i make music since last year. <br>
+          main genre is breakcore, EDM, maybe speedcore? :) <br>
+          also i'm studying & playing guitar for 7 years (professionally) <br>
+          -----------------<br>
+          ᗜˬᗜ
         </p>
     </div>
-
-    <div class="social-links">
-        <h3>my socials:</h3>
-        <a href="https://instagram.com/@_rubenswim" style="color: white;">Instagram</a>| 
-        <a href="tiktok.html" style="color: white;">TikTok</a>
-        <br>
-        <a href="music.html" class="music-button">My Music</a>
-    </div>
-
-    <div class="contact-section">
-        <h3>Contact Me:</h3>
-        <a href="mailto:ruben@rubenswim.com">ruben@rubenswim.com</a> |
-        <a href="https://t.me/nederlanded" target="_blank">Telegram</a>
-    </div>
-
-    <script>
-        setTimeout(function() {
-            document.querySelector('.image-container').classList.add('image-move-up');
-            document.querySelector('.bio').classList.add('show-bio');
-            document.querySelector('.social-links').classList.add('show-bio');
-            document.querySelector('.contact-section').classList.add('show-contacts');
-        }, 3000);
-    </script>
 </body>
 </html>
