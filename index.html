@@ -26,6 +26,8 @@
         .image-container {
             position: absolute;
             top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -40,7 +42,7 @@
         .bio {
             opacity: 0;
             text-align: center;
-            margin-top: 20px;
+            margin-top: 80px;
             transition: opacity 1s ease;
             padding: 0 20px;
         }
@@ -63,6 +65,25 @@
             margin-right: 10px;
         }
 
+        .music-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 15px;
+            font-size: 24px;
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .music-button:hover {
+            background-color: white;
+            color: black;
+        }
+
         .image-move-up {
             top: 10%;
         }
@@ -82,45 +103,6 @@
             opacity: 1;
         }
 
-        .second-page-link {
-            margin-top: 10px;
-            font-size: 14px;
-            display: block;
-        }
-
-    
-        @media (max-width: 768px) {
-            body {
-                font-size: 18px;
-            }
-
-            #profileImage {
-                max-width: 70%; 
-            }
-
-            .bio {
-                font-size: 16px;
-            }
-
-            .social-links a {
-                font-size: 14px;
-            }
-        }
-
-        
-        @media (max-width: 480px) {
-            body {
-                font-size: 16px;
-            }
-
-            #profileImage {
-                max-width: 80%; 
-            }
-
-            .bio {
-                font-size: 14px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -130,12 +112,12 @@
     </div>
 
     <div class="bio">
-        <h2>bio</h2>
+        <h2>about me</h2>
         <p>
-            i'm rubenswim<br>
-            i'm from Kazakhstan, Almaty<br>
-            I know 3 languages fluently, and I play guitar for 7 years<br>
-            also, I started producing my own music recently ᗜˬᗜ
+            name's ruben<br>
+            Kazakhstan, Almaty<br>
+            i make music<br>
+            ᗜˬᗜ
         </p>
     </div>
 
@@ -143,12 +125,13 @@
         <h3>my socials:</h3>
         <a href="https://instagram.com/@_rubenswim" style="color: white;">Instagram</a>| 
         <a href="tiktok.html" style="color: white;">TikTok</a>
-        <a href="music.html" class="second-page-link" style="color: white;">My Music</a>
+        <br>
+        <a href="music.html" class="music-button">My Music</a>
     </div>
 
-<div class="contact-section">
+    <div class="contact-section">
         <h3>Contact Me:</h3>
-        <a href="mailto:ruben@swim.ru">ruben@swim.ru</a> |
+        <a href="mailto:ruben@rubenswim.com">ruben@rubenswim.com</a> |
         <a href="https://t.me/nederlanded" target="_blank">Telegram</a>
     </div>
 
