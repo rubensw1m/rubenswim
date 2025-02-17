@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rubenswim</title>
+    <title>rubenswim - Music</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
@@ -13,7 +12,7 @@
             font-size: 24px;
             margin: 0;
             padding: 0;
-            background-color: black;
+            
             color: white;
             display: flex;
             flex-direction: column;
@@ -22,21 +21,37 @@
             min-height: 100vh;
         }
 
-        .image-container {
-            position: absolute;
-            top: 5%;
-            left: 50%;
-            transform: translateX(-50%);
+        .navbar {
+            width: 100%;
+            
+            padding: 10px 20px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            width: 30%;
-            max-width: 300px;
+            justify-content: space-between;
+            border-bottom: 5px solid gray;
         }
 
-        .image-container img {
-            width: 100%;
-            height: auto;
+        .navbar-logo {
+            font-size: 28px;
+            font-weight: bold;
+            
+            color: white;
+            
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .nav-links a[href="music.html"] {
+            color: gray;
         }
 
         .spotify-link {
@@ -63,8 +78,8 @@
         }
 
         .platform-links a:hover {
-            background-color: white;
-            color: black;
+            
+            color: white;
         }
 
         .track-section {
@@ -109,32 +124,24 @@
             font-size: 0.9em;
             color: #555;
             padding: 20px 0;
-            margin-top: auto; /* Это позволяет футеру оставаться внизу страницы */
+            margin-top: auto;
             background-color: black;
-        }
-
-        @media (max-width: 768px) {
-            .track {
-                width: 40%; 
-            }
-        }
-
-        @media (max-width: 480px) {
-            .track {
-                width: 80%;
-            }
         }
     </style>
 </head>
 <body>
-    <div class="image-container">
-    <a href="index.html">
-        <img src="fontbolt.png" id="profileImage" alt="Ruben Swim">
-    </a>
-</div>
+    <div class="navbar">
+        <div class="navbar-logo"><img src='fontbolt.png' alt='ruben swim' style='height: 40px;'></div>
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="music.html" style="color: gray;">MUSIC</a>
+            <a href="socials.html">SOCIALS</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+    </div>
     
     <div class="spotify-link">
-        <p>listen to my music on all platfroms!</p>
+        <p>listen to my music on all platforms!</p>
         <div class="platform-links">
             <a href="https://open.spotify.com/artist/0CMeVbQu6TX8LjAzPToaUM" target="_blank">Spotify</a>
             <a href="https://music.apple.com/us/artist/rubenswim/1782393507" target="_blank">Apple Music</a>
@@ -145,7 +152,7 @@
     <div class="track-section">
         <div class="track">
             <img src="1.jpeg" alt="geometric crap">
-            <p>avaliable on all platforms</p>
+            <p>available on all platforms</p>
             <h2>geometric crap</h2>
             <p>rubenswim</p>
             <p>nov 26 2024</p>
@@ -153,15 +160,15 @@
 
         <div class="track">
             <img src="2.jpeg" alt="deoxyribonucleic">
-            <p>avaliable on all platforms</p>
+            <p>available on all platforms</p>
             <h2>deoxyribonucleic</h2>
             <p>rubenswim</p>
             <p>dec 6 2024</p>
         </div>
 
         <div class="track">
-            <img src="3.jpeg" alt="harkrubonkht">
-            <p>avaliable on all platforms</p>
+            <img src="3.jpeg" alt="sharkrubonkht">
+            <p>available on all platforms</p>
             <h2>sharkrubonkht</h2>
             <p>rubenswim</p>
             <p>dec 7 2024</p>
