@@ -135,7 +135,7 @@
         section.addEventListener("click", function() {
             let sectionTitle = this.querySelector("h2").innerText.replace("/ ", "").toLowerCase();
             if (sectionTitle === "landing") {
-                window.location.href = "index.html"; // landing ведёт на index.html
+                window.location.href = "index.html";
             } else {
                 window.location.href = sectionTitle + ".html";
             }
@@ -145,10 +145,11 @@
     </script>
 </head>
 <body>
-    <div class="container"> <!-- Добавил контейнер -->
+    <div class="container">
         <div class="sidebar">
             <h2>rs</h2>
             <a href="index.html">/ landing</a>
+            <a href="about.html">/ about</a>
             <a href="updates.html">/ updates</a>
             <a href="blog.html">/ blog</a>
             <a href="music.html">/ music</a>
