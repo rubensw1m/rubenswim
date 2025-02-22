@@ -3,113 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rubenswim</title>
+    <title>rs | music</title>
+    <link rel="icon" type="image/png" href="icon.png">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+        @font-face {
+            font-family: 'MSX';
+            src: url('msx-font.woff2') format('woff2');
+        }
 
         body {
-            font-family: 'VT323', sans-serif;
-            font-size: 24px;
+            background-color: black;
+            color: #ddd;
+            font-family: 'MSX', monospace;
             margin: 0;
-            padding: 0;
-            background-color: black;
-            color: white;
+            padding: 20px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            min-height: 100vh;
-        }
-      
-      .navbar {
-            width: 100%;
-            background-color: black;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 5px solid gray;
-        }
-
-        .navbar-logo {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        .nav-links a[href="music.html"] {
-            color: gray;
-        }
-
-
-        .image-container {
-            position: absolute;
-            top: 5%;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
+            flex-direction: row;
             justify-content: center;
-            align-items: center;
-            width: 30%;
-            max-width: 300px;
         }
 
-        .image-container img {
-            width: 100%;
-            height: auto;
-        }
-
-        .spotify-link {
-            margin-top: 70px;
-            font-size: 1.2em;
-            text-align: center;
-        }
-
-        .platform-links {
-            margin-top: 20px;
+        .container {
             display: flex;
-            justify-content: center;
-            gap: 15px;
+            max-width: 900px;
+            width: 100%;
         }
 
-        .platform-links a {
-            color: white;
+        .sidebar {
+            width: 250px;
+            background-color: #111;
+            padding: 15px;
+        }
+
+        .sidebar a {
+            color: #66ff66;
             text-decoration: none;
-            font-size: 1em;
-            padding: 8px 15px;
-            border: 1px solid white;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
+            display: block;
+            margin: 5px 0;
         }
 
-        .platform-links a:hover {
-            background-color: white;
-            color: black;
+        .sidebar a:hover {
+            color: white;
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            max-width: 600px;
+            background-color: #222;
+            border: 1px solid #66ff66;
+            text-align: left;
+        }
+
+        h1 {
+            background-color: #000;
+            color: #66ff66;
+            padding: 10px;
+            display: inline-block;
         }
 
         .track-section {
             display: flex;
+            justify-content: space-between;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            width: 100%;
-            padding: 20px;
-            text-align: center;
+            padding: 20px 0;
         }
 
         .track {
-            width: 25%; 
-            max-width: 200px; 
+            width: 48%;
+            max-width: 250px;
             text-align: center;
         }
 
@@ -119,93 +80,125 @@
             margin-bottom: 10px;
         }
 
-        .track h2 {
-            font-size: 1.5em;
-            margin-bottom: 5px;
-            text-transform: none;
-            word-wrap: break-word;
-            white-space: normal;
+        .sections-container {
+            margin-top: 40px;
         }
 
-        .track p {
-            text-transform: none;
-            word-wrap: break-word;
-            white-space: normal;
+        .section {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #333;
+            border: 1px solid #66ff66;
+            cursor: pointer;
         }
 
-        .footer {
-            width: 100%;
-            text-align: center;
-            font-size: 0.9em;
-            color: #555;
-            padding: 20px 0;
-            margin-top: auto; /* Это позволяет футеру оставаться внизу страницы */
-            background-color: black;
+        .section:hover {
+            background-color: #444;
         }
 
         @media (max-width: 768px) {
-            .track {
-                width: 40%; 
+            body {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
             }
-        }
 
-        @media (max-width: 480px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .sidebar {
+                width: 100%;
+                text-align: center;
+            }
+
+            .sidebar a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            .content {
+                width: 100%;
+                padding: 10px;
+                border: none;
+            }
+
             .track {
-                width: 80%;
+                width: 100%;
+                max-width: 250px;
             }
         }
     </style>
 </head>
 <body>
-  <div class="navbar">
-        <div class="navbar-logo"><img src='fontbolt.png' alt='ruben swim' style='height: 40px;'></div>
-        <div class="nav-links">
-            <a href="index.html">HOME</a>
-            <a href="music.html" style="color: gray;">MUSIC</a>
-            <a href="socials.html">SOCIALS</a>
-            <a href="contact.html">CONTACT</a>
-        </div>
-    </div>
-    
-    
-    <div class="spotify-link">
-        <p>listen to my music on all platfroms!</p>
-        <div class="platform-links">
-            <a href="https://open.spotify.com/artist/0CMeVbQu6TX8LjAzPToaUM" target="_blank">Spotify</a>
-            <a href="https://music.apple.com/us/artist/rubenswim/1782393507" target="_blank">Apple Music</a>
-            <a href="https://music.youtube.com/channel/UCffGgln4Ssd1nJ7GINDBmBA" target="_blank">YouTube Music</a>
-        </div>
-    </div>
-
-    <div class="track-section">
-        <div class="track">
-            <img src="1.jpeg" alt="geometric crap">
-            <p>avaliable on all platforms</p>
-            <h2>geometric crap</h2>
-            <p>rubenswim</p>
-            <p>nov 26 2024</p>
+    <div class="container">
+        <div class="sidebar">
+            <h2>rubenswim</h2>
+            <a href="index.html">/ landing</a>
+            <a href="about.html">/ about</a>
+            <a href="updates.html">/ updates</a>
+            <a href="blog.html">/ blog</a>
+            <a href="music.html" style="color: gray;">/ music</a>
+            <a href="contact.html">/ contact</a>
+            <a href="projects.html">/ projects</a>
         </div>
 
-        <div class="track">
-            <img src="2.jpeg" alt="deoxyribonucleic">
-            <p>avaliable on all platforms</p>
-            <h2>deoxyribonucleic</h2>
-            <p>rubenswim</p>
-            <p>dec 6 2024</p>
-        </div>
+        <div class="content">
+            <h1>music.</h1>
+            <p>this is where you can find all my releases. check out my music on your favorite platforms.</p>
+            
+            <div class="track-section">
+                <div class="track">
+                    <img src="1.jpeg" alt="first 6 records">
+                    <h2>first 6 records // EP</h2>
+                    <p>rubenswim</p>
+                    <p>dec 20 2024</p>
+                </div>
 
-        <div class="track">
-            <img src="3.jpeg" alt="harkrubonkht">
-            <p>avaliable on all platforms</p>
-            <h2>sharkrubonkht</h2>
-            <p>rubenswim</p>
-            <p>dec 7 2024</p>
-        </div>
-    </div>
+                <div class="track">
+                    <img src="2.jpeg" alt="seirogann正露丸">
+                    <h2>seirogann正露丸 // single</h2>
+                    <p>rubenswim</p>
+                    <p>feb 16 2025</p>
+                </div>
+            </div>
 
-    <div class="footer">
-        <p>© rubenswim 2024. All rights reserved.</p>
-        <p>for questions, email: <a href="mailto:ruben@rubenswim.com" style="color: white;">ruben@rubenswim.com</a></p>
+            <div class="sections-container">
+                <div class="section">
+                    <h2>/ landing</h2>
+                    <p>this is the main hub of my site. 
+                    from here, you can explore everything i do – 
+                    music, projects, updates, and whatever else i decide to 
+                    throw in.</p>
+                </div>
+                <div class="section">
+                    <h2>/ about</h2>
+                    <p>this is where i talk a little about myself, what i do, and why this site exists.</p>
+                </div>
+                <div class="section">
+                    <h2>/ updates</h2>
+                    <p>log of changes and minor tweaks to the site.</p>
+                </div>
+                <div class="section">
+                    <h2>/ blog</h2>
+                    <p>sometimes i write things. this is where they go.</p>
+                </div>
+                <div class="section">
+                    <h2>/ music</h2>
+                    <p>my releases and projects in various genres.
+                    (you're here.)</p>
+                </div>
+                <div class="section">
+                    <h2>/ contact</h2>
+                    <p>you can check out how and where you can contact me here.</p>
+                </div>
+                <div class="section">
+                    <h2>/ projects</h2>
+                    <p>side projects and experiments.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
