@@ -3,148 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruben Swim</title>
-    
+    <title>rs | landing</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+        @font-face {
+            font-family: 'MSX';
+            src: url('msx-font.woff2') format('woff2');
+        }
 
         body {
-            font-family: 'VT323', sans-serif;
-            font-size: 24px;
+            background-color: black;
+            color: #ddd;
+            font-family: 'MSX', monospace;
             margin: 0;
-            padding: 0;
-            background-color: black;
-            color: white;
+            padding: 20px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            height: 100vh;
+            flex-direction: row;
         }
 
-         .navbar {
-            width: 100%;
-            background-color: black;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 5px solid gray;
+        .sidebar {
+            width: 250px;
+            background-color: #111;
+            padding: 15px;
         }
 
-        .navbar-logo {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            color: white;
+        .sidebar a {
+            color: #66ff66;
             text-decoration: none;
-            font-size: 18px;
-        }
-
-        .nav-links a[href="index.html"] {
-            color: gray;
-        }
-
-        .bio {
-            text-align: center;
-            margin-top: 80px;
-            padding: 0 20px;
-        }
-
-        .bio h2 {
-            font-size: 32px;
-        }
-
-        .bio p {
-            font-size: 26px;
-            word-wrap: break-word;
-            word-break: break-word;
-        }
-
-        .social-links {
-            text-align: center;
-            margin-top: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 24px;
+            display: block;
             margin: 5px 0;
         }
 
-        .music-button {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 15px;
-            font-size: 24px;
-            background-color: transparent;
+        .sidebar a:hover {
             color: white;
-            border: 1px solid white;
-            cursor: pointer;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
         }
 
-        .music-button:hover {
-            background-color: white;
-            color: black;
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            max-width: 600px;
+            background-color: #222;
+            border: 1px solid #66ff66;
         }
-      
-      .footer {
-            width: 100%;
+
+        h1 {
+            background-color: #000;
+            color: #66ff66;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        .footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #111;
             text-align: center;
-            font-size: 0.9em;
-            color: #555;
-            padding: 20px 0;
-            margin-top: auto; 
-            background-color: black;
         }
 
+        a {
+            color: #66ff66;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: white;
+        }
     </style>
 </head>
 <body>
-
-    <div class="navbar">
-        <div class="navbar-logo"><img src='fontbolt.png' alt='ruben swim' style='height: 40px;'></div>
-        <div class="nav-links">
-            <a href="index.html"style="color: gray;">HOME</a>
-            <a href="music.html">MUSIC</a>
-            <a href="socials.html">SOCIALS</a>
-            <a href="contact.html">CONTACT</a>
-        </div>
+    <div class="sidebar">
+        <h2>rubenswim</h2>
+        <a href="index.html">/ landing</a>
+        <a href="about.html">/ about</a>
+        <a href="updates.html">/ updates</a>
+        <a href="blog.html">/ blog</a>
+        <a href="contact.html">/ contact</a>
     </div>
 
-
-    <div class="bio">
-        <h2>ABOUT ME</h2>
-        <p>
-            name's Ruben (my real name btw)<br>
-            Almaty, Kazakhstan<br>
+    <div class="content">
+        <h1>hello.</h1>
+      <p>i'm <b>ruben</b>. <span style="color: gray; font-style: italic;">(he/him)</span> welcome to my everything home.</p>
+        <p>so i don't really know what should i write here<br> 
+          but i guess this is supposed to be my bio lol//<br>
+       	don't expect much from this page so yhh<br>
             -----------------<br>
-          i make music since last year. <br>
-          main genre: Hardcore, Speedcore, Breakcore, DnB <br>
-          sub genre: Chiptune <br>
-          ------------------<br>
-          im into old tech & stuff like that<br>
-          also, i'm studying & playing guitar for 7 years<br> (professionally)<br>
-            ᗜˬᗜ
+            i make music since last year. <br>
+            main genre's: hardcore, speedcore w/DnB <br>
+            sub genre: chiptune <br>
+            ------------------<br>
+           also im into old tech &amp; stuff like that<br>
+          
+          
         </p>
     </div>
-           <div class="footer">
-        <p>© rubenswim 2025. All rights reserved.</p>
-        <p>for questions, email: <a href="mailto:ruben@rubenswim.com" style="color: white;">ruben@rubenswim.com</a></p>
+
+    <div class="footer">
+        <p>for questions, email: <a href="mailto:ruben@rubenswim.com">ruben@rubenswim.com</a></p>
     </div>
 </body>
 </html>
