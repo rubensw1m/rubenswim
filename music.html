@@ -130,6 +130,21 @@
             }
         }
     </style>
+    <script>
+            </style><script>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll(".section").forEach(section => {
+        section.addEventListener("click", function() {
+            let sectionTitle = this.querySelector("h2").innerText.replace("/ ", "").toLowerCase();
+            if (sectionTitle === "landing") {
+                window.location.href = "index.html"; // landing ведёт на index.html
+            } else {
+                window.location.href = sectionTitle + ".html";
+            }
+        });
+    });
+});
+    </script>
 </head>
 <body>
     <div class="container">
