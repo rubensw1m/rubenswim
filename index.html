@@ -1,4 +1,6 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rs | landing</title>
@@ -47,35 +49,18 @@
             flex-grow: 1;
             padding: 20px;
             max-width: 600px;
+            width: 100%;
             background-color: #222;
             border: 1px solid #66ff66;
             text-align: left;
-        }
+            box-sizing: border-box;
+        }    
 
         h1 {
             background-color: #000;
             color: #66ff66;
             padding: 10px;
             display: inline-block;
-        }
-
-        .track-section {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            padding: 20px 0;
-        }
-
-        .track {
-            width: 48%;
-            max-width: 250px;
-            text-align: center;
-        }
-
-        .track img {
-            width: 100%;
-            height: auto;
-            margin-bottom: 10px;
         }
 
         .sections-container {
@@ -87,7 +72,10 @@
             padding: 10px;
             background-color: #333;
             border: 1px solid #66ff66;
-            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            color: #ddd;
+            transition: background 0.2s;
         }
 
         .section:hover {
@@ -121,28 +109,8 @@
                 padding: 10px;
                 border: none;
             }
-
-            .track {
-                width: 100%;
-                max-width: 250px;
-            }
         }
     </style>
-    <script>
-            </style><script>
-  document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll(".section").forEach(section => {
-        section.addEventListener("click", function() {
-            let sectionTitle = this.querySelector("h2").innerText.replace("/ ", "").toLowerCase();
-            if (sectionTitle === "landing") {
-                window.location.href = "index.html";
-            } else {
-                window.location.href = sectionTitle + ".html";
-            }
-        });
-    });
-});
-    </script>
 </head>
 <body>
     <div class="container">
@@ -169,34 +137,40 @@
             </p>
 
             <div class="sections-container">
-                <div class="section">
+                <a href="index.html" class="section">
                     <h2>/ landing</h2>
                     <p>this is the main hub of my site. 
-                        from here, you can explore everything i do – 
-                        music, projects, updates, and whatever else i decide to 
-                        throw in. (you're here.)</p>
-                </div>
-                <div class="section">
+                    from here, you can explore everything i do – 
+                    music, projects, updates, and whatever else i decide to 
+                    throw in. (you're here.)</p>
+                </a>
+
+                <a href="updates.html" class="section">
                     <h2>/ updates</h2>
                     <p>log of changes and minor tweaks to the site.</p>
-                </div>
-                <div class="section">
+                </a>
+
+                <a href="blog.html" class="section">
                     <h2>/ blog</h2>
                     <p>sometimes I write things. this is where they go.</p>
-                </div>
-                <div class="section">
+                </a>
+
+                <a href="music.html" class="section">
                     <h2>/ music</h2>
                     <p>my releases and projects in various genres.</p>
-                </div>
-                <div class="section">
+                </a>
+
+                <a href="contact.html" class="section">
                     <h2>/ contact</h2>
                     <p>you can check out how and where you can contact me here.</p>
-                </div>
-                <div class="section">
+                </a>
+
+                <a href="projects.html" class="section">
                     <h2>/ projects</h2>
-                </div>
+                    <p>side projects and experiments.</p>
+                </a>
             </div>
         </div>
     </div>
 </body>
-
+</html>
