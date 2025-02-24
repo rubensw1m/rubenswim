@@ -1,120 +1,54 @@
-<html><head>
-<link rel="alternate" type="application/rss+xml" title="the underground garden" href="/rss/">
-<link rel="stylesheet" type="text/css" href="css.css">
-<link rel="preload" href="data/hack-regular.woff" as="font" type="font/woff" crossorigin="">
-<link rel="preload" href="data/hack-sharppc3k.woff" as="font" type="font/woff" crossorigin="">
-<link rel="preload" href="data/hack-ibmcga2y.woff" as="font" type="font/woff" crossorigin="">
-<meta property="og:title" content="msx.horse | msx2plus.com | heckscaper.com">
-<meta property="og:type" content="website">
-<meta property="og:description" content="msx's homepage">
-<meta property="og:image" content="https://msx.horse/data/embed_donk.gif">
-<meta property="og:image:type" content="image/gif">
-<meta property="og:image:width" content="258">
-<meta property="og:image:height" content="258">
-<title>rs</title>
-<link rel="icon" type="image/png" href="icon.png">
-<style>
-body {
-    image-rendering:pixelated;
-	background-image: url("https://rubensw1m.github.io/rubenswim/bg01.png");
-	background-size:cover;
-    background-position:right;
-	background-attachment: fixed;
-	background-color:#f4f4f4;
-	color:#181818;
-	font-family: hack, monospace;
-	font-size:14px;
-	padding:0px;
-    line-height:1.25;
-    overflow:hidden;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rs | enter</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <style>
+        @font-face {
+            font-family: 'MSX';
+            src: url('msx-font.woff2') format('woff2');
+        }
 
-.box {
-    color:#181818;
-    width:400px;
-    background-color:#f4f4f4;
-    padding:12px;
-    outline: 2px dashed #181818;
-    outline-offset:-4px;
-    margin:auto;
-    position:relative;
-}
+        body {
+            background-image: url("https://rubensw1m.github.io/rubenswim/bg01.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #f4f4f4;
+            color: black;
+            font-family: 'MSX', monospace;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-.head {
-    position:absolute;
-    background-size:100% 100%;
-    width:564px;
-    height:84px;
-    top:14px;
-    left:14px;
-}
+        .container {
+            background: white;
+            padding: 20px;
+            border: 2px dashed black;
+            max-width: 500px;
+            text-align: left;
+        }
 
-.foot {
-    position:absolute;
-    width:457px;
-    height:67px;
-    bottom:14px;
-    right:14px;
-}
-
-.enter {
-    font-family:elegant, monospace;
-    font-weight:normal;
-    font-size:58px;
-    color:#f4f4f4;
-    position:relative;
-    text-align:center;
-    background-color:#181818;
-    width:270px;
-    margin:auto;
-    height:64px;
-    top:-6px;
-    transform: rotate(2deg);
-    letter-spacing:8px;
-    border: solid 2px #181818;
-}
-
-c
-}
-
-.container{
-    position:absolute;
-    top:50%;
-    left:50%;
-    width:500px;
-    transform:translate(-50%,-50%);
-}
-
-@keyframes jitter
-		{
-		0%	{ transform: skew(-7deg) translate(0px, 0px) scalex(1) scaley(1.03) rotate(0deg);}
-		10%	{ transform: skew(0.3deg) translate(-1px, 0px) scalex(1.07) scaley(1) rotate(0deg); }
-		20%	{ transform: skew(2deg) translate(3px, 0px) scalex(1) scaley(1) rotate(0deg); }
-		30%	{ transform: skew(0deg) translate(0px, 2px) scalex(1.08) scaley(1) rotate(0deg); }
-		40%	{ transform: skew(-0.5deg) translate(1px, -5px) scalex(1) scaley(1.004) rotate(0deg); }
-		50%	{ transform: skew(-0.5deg) translate(0px, 0px) scalex(1.1) scaley(1) rotate(0deg); }
-		60%	{ transform: skew(0deg) translate(-3px, 0px) scalex(1) scaley(1) rotate(0deg); }
-		70%	{ transform: skew(0.5deg) translate(-1px, -4px) scalex(0.95) scaley(1) rotate(0deg); }
-		80%	{ transform: skew(3deg) translate(3px, 0px) scalex(1) scaley(1.03) rotate(0deg); }
-		90%	{ transform: skew(1deg) translate(0px, 0px) scalex(1.08) scaley(1) rotate(0deg); }
-		100%	{ transform: skew(-0.5deg) translate(1px, 5px) scalex(1) scaley(1.12) rotate(0deg); }
-		}
-
-</style></head>
-
+        .enter-button {
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
 <body>
-
-<div class="head"></div>
-<div class="foot"></div>
-
-<div class="container">
-<div class="box">
-<p>this site uses minimal javascript to keep track of menu states between pages. this page will never contain embeds, libraries, tracking, and so on hosted on other servers.</p>
-
-<p> this page is designed for desktop viewing and may prove awkward on mobile platforms.</p>
-</div>
-<div class="enter"><a href="landing.php">ENTER</a></div>
-<div>
-
-
-</div></div></body></html>
+    <div class="container">
+        <p>this site uses minimal javascript to keep track of menu states between pages. this page will never contain embeds, libraries, tracking, and so on hosted on other servers.</p>
+        
+        <p>this page is designed for desktop viewing and may prove awkward on mobile platforms.</p>
+    </div>
+    
+    <img src="enter.png" alt="ENTER" class="enter-button" onclick="window.location.href='index.html'">
+</body>
+</html>
