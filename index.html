@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rs | enter</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <style>
+        @font-face {
+            font-family: 'MSX';
+            src: url('msx-font.woff2') format('woff2');
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: black;
+            font-family: 'MSX', monospace;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border: 2px dashed black;
+            max-width: 500px;
+            text-align: left;
+        }
+
+        .enter-button {
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>this site uses minimal javascript to keep track of menu states between pages. this page will never contain embeds, libraries, tracking, and so on hosted on other servers.</p>
+        
+        <p>this page is designed for desktop viewing and may appear differently on mobile platforms.</p>
+    </div>
+    
+    <img src="enter.png" alt="ENTER" class="enter-button" onclick="window.location.href='landing.html'">
+</body>
+</html>
