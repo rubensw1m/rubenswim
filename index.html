@@ -19,6 +19,9 @@
             background-color: #f4f4f4;
             color: black;
             font-family: 'MSX', monospace;
+            font-size: 14px;
+            padding: 0px;
+            line-height: 1.25;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -26,7 +29,16 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            overflow: hidden;
         }
+
+        .box {
+            background-color: white;
+            padding: 12px;
+            outline: 2px dashed black;
+            outline-offset: -4px:
+            text-align: center;
+            max-width: 400px;
 
         .container {
             background: white;
@@ -47,6 +59,18 @@
                 background-position: center;
                 background-attachment: scroll;
             }
+
+            .box {
+                max-width: 90%;
+                padding: 10px;
+            }
+
+            .enter {
+                font-size: 24px;
+                padding: 8px 15px;
+            }
+        }
+                
     </style>
 </head>
 <body>
