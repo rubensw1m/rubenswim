@@ -4,82 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rs</title>
-    <link rel="icon" type="image/png" href="favicon.png">
     <style>
-        @font-face {
-            font-family: 'MSX';
-            src: url('msx-font.woff2') format('woff2');
-        }
-
         body {
-            background-image: url("https://rubensw1m.github.io/rubenswim/bg01.jpg");
-            background-size: contain;
+            background-image: url('https://rubensw1m.github.io/rubenswim/bg01.jpg');
+            background-size: cover;
             background-position: center;
             background-attachment: fixed;
             background-color: #f4f4f4;
-            color: black;
-            font-family: 'MSX', monospace;
+            color: #181818;
+            font-family: monospace;
             font-size: 14px;
-            padding: 0px;
-            line-height: 1.25;
-            text-align: center;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            overflow: hidden;
+            flex-direction: column;
         }
 
         .box {
-            background-color: white;
-            padding: 12px;
-            outline: 2px dashed black;
-            outline-offset: -4px:
-            text-align: center;
+            background-color: #fff;
+            padding: 15px;
+            border: 2px dashed #181818;
             max-width: 400px;
-
-        .container {
-            background: white;
-            padding: 20px;
-            border: 2px dashed black;
-            max-width: 500px;
-            text-align: left;
+            text-align: center;
         }
 
-        .enter-button {
-            margin-top: 20px;
+        .enter {
+            font-family: 'Courier New', monospace;
+            font-size: 54px;
+            color: #fff;
+            background-color: #181818;
+            padding: 10px 20px;
+            display: inline-block;
+            margin-top: 15px;
+            transform: rotate(2deg);
             cursor: pointer;
+            text-decoration: none;
+            border: 2px solid #181818;
         }
-
-        @media (max-width: 768px) {
-            body {
-                background-size: cover;
-                background-position: center;
-                background-attachment: scroll;
-            }
-
-            .box {
-                max-width: 90%;
-                padding: 10px;
-            }
-
-            .enter {
-                font-size: 24px;
-                padding: 8px 15px;
-            }
-        }
-                
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="box">
         <p>this site uses minimal javascript to keep track of menu states between pages. this page will never contain embeds, libraries, tracking, and so on hosted on other servers.</p>
-        
-        <p>this page is designed for desktop viewing and may prove awkward on mobile platforms.</p>
+        <p> this page is designed for desktop viewing and may prove awkward on mobile platforms.</p>
     </div>
-    
-    <img src="enter.png" alt="ENTER" class="enter-button" onclick="window.location.href='landing.html'">
+    <a href="landing.html" class="enter">ENTER</a>
 </body>
 </html>
