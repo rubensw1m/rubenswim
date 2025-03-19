@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rs | blog</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        @font-face {
+            font-family: 'MSX';
+            src: url('msx-font.woff2') format('woff2');
+        }
+
+        body {
+            background-color: black;
+            color: #ddd;
+            font-family: 'MSX', monospace;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #111;
+            padding: 15px;
+        }
+
+        .sidebar a {
+            color: #66ff66;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .sidebar a:hover {
+            color: white;
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+            background-color: #222;
+            border: 1px solid #66ff66;
+            text-align: left;
+            box-sizing: border-box;
+        }
+        
+        h1 {
+            background-color: #000;
+            color: #66ff66;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        .sections-container {
+            margin-top: 40px;
+        }
+        
+        .section {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #333;
+            border: 1px solid #66ff66;
+            text-decoration: none;
+            display: block;
+            color: #ddd;
+            transition: background 0.2s;
+        }
+
+        .section:hover {
+            background-color: #444;
+        }
+
+        .blog-post {
+            padding: 10px;
+            border-bottom: 1px solid #66ff66;
+            cursor: pointer;
+        }
+
+        .blog-post h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .blog-post p {
+            margin: 5px 0;
+            display: none;
+        }
+
+        .blog-post.active p {
+            display: block;
+        }
+
+        .blog-post:hover {
+            background-color: #333;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".blog-post").forEach(post => {
+                post.addEventListener("click", function() {
+                    this.classList.toggle("active");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>rs</h2>
+            <a href="index.html">/ landing</a>
+            <a href="about.html">/ about</a>
+            <a href="music.html">/ music</a>
+            <a href="blog.html">/ blog</a>
+            <a href="updates.html">/ updates</a>
+            <a href="contact.html">/ contact</a>
+            <a href="projects.html">/ projects</a>
+        </div>
+
+        <div class="content">
+            <h1>blog.</h1>
+            <p>thoughts, updates, and whatever else i feel like sharing.</p>
+            
+            <div class="blog-post">
+                <h2>2025_03_19 // finally made the blog section page</h2>
+                <p>just a test lol</p>
+            </div>
+          <div class="sections-container">
+                <a href="landing.html" class="section">
+                    <h2>// landing</h2>
+                    <p>this is the main hub of my site. 
+                    from here, you can explore everything i do – 
+                    music, projects, updates, and whatever else i decide to 
+                    throw in. (you're here.)</p>
+                </a>
+
+                <a href="about.html" class="section">
+                    <h2>// about</h2>
+                    <p>this is where i talk a little about 
+                    myself, 
+                    what i do, and why this site exists.</p>
+                </a>
+
+                <a href="music.html" class="section">
+                    <h2>// music</h2>
+                    <p>my releases and projects in various genres.</p>
+                </a>
+
+                <a href="blog.html" class="section">
+                    <h2>// blog</h2>
+                    <p>sometimes I write things. this is where they go.</p>
+                </a>
+
+                <a href="updates.html" class="section">
+                    <h2>// updates</h2>
+                    <p>log of changes and minor tweaks to the site.</p>
+                </a>
+
+                <a href="contact.html" class="section">
+                    <h2>// contact</h2>
+                    <p>you can check out how and where you can contact me here.</p>
+                </a>
+
+                <a href="projects.html" class="section">
+                    <h2>// projects</h2>
+                    <p>side projects and experiments.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</body>
+</html>
