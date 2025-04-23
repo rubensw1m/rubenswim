@@ -7,7 +7,7 @@
   <link rel="icon" href="favicon.ico">
   <style>
     body {
-      background-color: white;
+      background-color: white; /* Оставил цвет фона белым */
       color: white;
       font-family: 'Web437 Sharp', monospace;
       margin: 0;
@@ -51,13 +51,13 @@
       opacity: 0;
       animation: appear 0.1s linear 0.7s forwards;
     }
-    
+
     .highlighted {
-    background-color: black;
-    color: white;
-    display: inline-block;
-    padding: 2px 5px;
-  }
+      background-color: black;
+      color: white;
+      display: inline-block;
+      padding: 2px 5px;
+    }
 
     li:nth-child(1) {
       animation-delay: 0.7s;
@@ -111,7 +111,7 @@
     .links li::before {
       content: "> ";
     }
-    
+
     @font-face {
       font-family: 'Web437 Sharp';
       src: url('/Web437_Sharp_PC3K.woff') format('woff2');
@@ -131,7 +131,7 @@
       }
     }
   </style>
-  <script>
+   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const backgrounds = [
         "https://rubensw1m.github.io/rubenswim/bg01.png",
@@ -145,11 +145,11 @@
 </head>
 <body>
   <div class="container">
-  <div class="header highlighted">QUICK LINKS</div>
+    <div class="header highlighted">QUICK LINKS</div>
     <ul class="links">
       <li><a href="https://rubenswim.com/music.html" target="_blank">MUSIC [/MUSIC.HTML]</a></li>
       <li><a href="https://msx.horse/res.php" target="_blank">SAMPLES/RESOURCES</a></li>
-      <li><a href="https://heckscaper.com" target="_blank">HOMEPAGE [RUBENSWIM.COM]</a></li>
+      <li><a href="https://rubenswim.com/landing.html" target="_blank">HOMEPAGE [RUBENSWIM.COM]</a></li>
     </ul>
     <ul class="social">
       <li>EMAIL</li>
