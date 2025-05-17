@@ -1,74 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>rs</title>
-  <link rel="icon" href="favicon.ico" />
-  <style>
-    body {
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      background-color: #f4f4f4;
-      color: #181818;
-      font-family: monospace;
-      font-size: 14px;
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      overflow: hidden;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>under construction</title>
+    <style>
+        @font-face {
+            font-family: 'Web437';
+            src: url('Web437_Sharp_PC3K.woff') format('woff');
+        }
 
-    .box {
-      background-color: #fff;
-      padding: 0px;
-      border: 2px dashed #181818;
-      max-width: 500px;
-      text-align: center;
-      line-height: 1.5;
-    }
+        @font-face {
+            font-family: 'MSSansSerif';
+             src: url('ms-sans-serif-1.otf.woff2') format('woff2'); 
+        }
 
-    .enter {
-      font-family: 'Courier New', monospace;
-      font-size: 54px;
-      color: #fff;
-      background-color: #181818;
-      padding: 10px 20px;
-      display: inline-block;
-      margin-top: 15px;
-      transform: rotate(2deg);
-      cursor: pointer;
-      text-decoration: none;
-      border: 2px solid #181818;
-    }
+        body {
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-    .enter:hover {
-      background-color: #fff;
-      color: #181818;
-    }
-  </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const backgrounds = [
-        "https://rubensw1m.github.io/rubenswim/bg01.png",
-        "https://rubensw1m.github.io/rubenswim/bg02.png",
-        "https://rubensw1m.github.io/rubenswim/bg03.png"
-      ];
-      const bg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
-      document.body.style.backgroundImage = `url('${bg}')`;
-    });
-  </script>
+        #boot-screen {
+            white-space: pre-wrap;
+            font-size: 0.9em;
+            line-height: 1.1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Web437', monospace;
+        }
+
+        #error-window {
+            display: none;
+            font-family: 'MSSansSerif', sans-serif; /* Используем MS Sans Serif */
+            font-size: 12px;
+            color: black;
+            background-color: #f0f0f0;
+            border: 2px outset #d4d0c8;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            width: 300px;
+        }
+
+        .error-titlebar {
+            background-color: #000080;
+            color: white;
+            padding: 2px 5px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .error-icon {
+            float: left;
+            margin-right: 10px;
+            font-size: 1.5em;
+            color: #ff0000;
+        }
+
+        .error-message {
+            margin-bottom: 10px;
+            white-space: pre-wrap;
+        }
+
+        .error-buttons {
+            text-align: right;
+        }
+
+        .error-button {
+            background-color: #f0f0f0;
+            border: 2px outset #d4d0c8;
+            padding: 5px 15px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-  <div class="box">
-    <p>this site uses minimal javascript to keep track of menu states between pages. this page will never contain embeds, libraries, tracking, and so on hosted on other servers.</p>
-    <p>while this page will work in most browsers, firefox (or a fork of it) is recommended. this page is designed for desktop viewing and may prove awkard on mobile platforms.</p>
-  </div>
+    <div id="boot-screen"></div>
+    <div id="error-window">
+        <div class="error-titlebar">
+            Error
+        </div>
+        <span class="error-icon">×</span>
+        <div class="error-message">
+An error has occurred.
 
-  <a href="landing.html" class="enter">ENTER</a>
+The website is currently undergoing a major redesign and is temporarily unavailable.
+
+Please try again later.
+        </div>
+        <div class="error-buttons">
+            <button class="error-button" onclick="document.getElementById('error-window').style.display='none';">OK</button>
+        </div>
+    </div>
+
+    <script>
+        const bootText = [
+            "Microsoft Windows 98 Startup...",
+            "",
+            "Copyright Microsoft Corp 1981-1998",
+            "",
+            "Checking system configuration...",
+            "  CPU: Intel Pentium II.........OK",
+            "  Memory: 64MB RAM.............OK",
+            "  Graphics: S3 Trio64...........OK",
+            "",
+            "Loading essential drivers...",
+            "  KERNEL32.DLL................OK",
+            "  USER32.DLL..................OK",
+            "  GDI32.DLL...................OK",
+            "",
+            "Starting Windows 98...",
+            ""
+        ];
+
+        const bootScreen = document.getElementById('boot-screen');
+        const errorWindow = document.getElementById('error-window');
+        let bootIndex = 0;
+
+        function typeWriter() {
+            if (bootIndex < bootText.length) {
+                bootScreen.textContent += bootText[bootIndex] + "\n";
+                bootIndex++;
+                setTimeout(typeWriter, getRandomSpeed());
+            } else {
+                bootScreen.style.display = 'none';
+                errorWindow.style.display = 'block';
+            }
+        }
+
+        function getRandomSpeed() {
+            return Math.random() * 80 + 20;
+        }
+
+        typeWriter();
+    </script>
 </body>
 </html>
